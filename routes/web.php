@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    app()->bind('aaa', function () {
-        return new stdClass();
-    });
-    dd(app('aaa'));
-    return view('welcome');
+
 });
+
+//Route::resource('post', 'PostsController');
+Route::resource('post', 'PostController');
